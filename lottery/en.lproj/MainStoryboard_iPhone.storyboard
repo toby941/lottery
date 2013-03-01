@@ -1,26 +1,244 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Y3u-ym-jWH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="5">
+        <!--Lottery View Controller - 抽奖-->
+        <scene sceneID="ph1-4p-pMx">
             <objects>
-                <viewController id="2" customClass="LotteryViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController id="Klo-Fv-LAe" customClass="LotteryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pgE-dE-bUG">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="抽奖人员" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kkh-jZ-v1e">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="NCu-jX-yCS"/>
+                                    <constraint firstAttribute="height" constant="43" id="pGC-CE-DWd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-wV-8cZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Tbx-n7-gpm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="选择人员">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="奖品" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sK-Wd-61e">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="FdZ-wF-SLw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6d-jq-MwV">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="选择奖品">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhT-5C-E38">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="V6y-Rj-qTR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="抽奖">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdW-qu-bsJ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nQd-nQ-k7U"/>
+                                    <constraint firstAttribute="height" constant="100" id="pFt-fP-kDc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xdW-qu-bsJ" firstAttribute="centerX" secondItem="OhT-5C-E38" secondAttribute="centerX" type="default" id="1FO-FP-fOg"/>
+                            <constraint firstItem="Kkh-jZ-v1e" firstAttribute="top" secondItem="pgE-dE-bUG" secondAttribute="top" constant="100" id="2bD-jr-XjQ"/>
+                            <constraint firstItem="zOV-wV-8cZ" firstAttribute="top" secondItem="pgE-dE-bUG" secondAttribute="top" constant="99" id="5Pv-A9-x5S"/>
+                            <constraint firstAttribute="trailing" secondItem="zOV-wV-8cZ" secondAttribute="trailing" constant="66" id="Djm-Vm-MPb"/>
+                            <constraint firstItem="J6d-jq-MwV" firstAttribute="leading" secondItem="zOV-wV-8cZ" secondAttribute="leading" type="default" id="L2h-g8-BdB"/>
+                            <constraint firstAttribute="bottom" secondItem="OhT-5C-E38" secondAttribute="bottom" constant="11" id="X5k-UV-8pv"/>
+                            <constraint firstItem="J6d-jq-MwV" firstAttribute="trailing" secondItem="zOV-wV-8cZ" secondAttribute="trailing" type="default" id="ePH-WA-n9l"/>
+                            <constraint firstItem="J6d-jq-MwV" firstAttribute="top" secondItem="pgE-dE-bUG" secondAttribute="top" constant="177" id="giJ-g6-40v"/>
+                            <constraint firstItem="J6d-jq-MwV" firstAttribute="centerY" secondItem="9sK-Wd-61e" secondAttribute="centerY" type="default" id="hsM-4d-vyi"/>
+                            <constraint firstItem="Kkh-jZ-v1e" firstAttribute="leading" secondItem="pgE-dE-bUG" secondAttribute="leading" constant="44" id="p7T-E4-Gud"/>
+                            <constraint firstItem="xdW-qu-bsJ" firstAttribute="centerX" secondItem="pgE-dE-bUG" secondAttribute="centerX" type="default" id="paL-FO-kJO"/>
+                            <constraint firstItem="xdW-qu-bsJ" firstAttribute="top" secondItem="J6d-jq-MwV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vNK-YI-Bcl"/>
+                            <constraint firstItem="9sK-Wd-61e" firstAttribute="leading" secondItem="Kkh-jZ-v1e" secondAttribute="leading" type="default" id="ySG-8T-FdX"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="抽奖" id="AP2-Sc-Jab"/>
+                    <connections>
+                        <outlet property="action" destination="OhT-5C-E38" id="Nh0-Zy-tcs"/>
+                        <outlet property="peopleButton" destination="zOV-wV-8cZ" id="baK-SW-hnV"/>
+                        <outlet property="peopleImageView" destination="xdW-qu-bsJ" id="mfR-R3-Cmp"/>
+                        <outlet property="peopleName" destination="Kkh-jZ-v1e" id="O2v-Oi-lNk"/>
+                        <outlet property="prizeButton" destination="J6d-jq-MwV" id="Lem-4n-eAe"/>
+                        <outlet property="prizeName" destination="9sK-Wd-61e" id="oJh-U7-5zc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioh-pi-w6k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="669" y="756"/>
+        </scene>
+        <!--Prize Manage Controller - 奖品管理-->
+        <scene sceneID="k8E-hX-Pab">
+            <objects>
+                <viewController id="nW7-Q2-RNY" customClass="PrizeManageController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fag-2P-uiJ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2W-HC-BLo">
+                                <items>
+                                    <barButtonItem systemItem="edit" id="9QX-pl-VTl"/>
+                                    <barButtonItem title="奖品管理" width="208" style="plain" id="OAu-9E-Q4c"/>
+                                    <barButtonItem systemItem="add" id="Ddm-fD-3pw"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2zB-Md-mdB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" horizontalCompressionResistancePriority="770" selectionStyle="blue" indentationWidth="10" reuseIdentifier="prizeTableCell" rowHeight="100" id="UD8-sL-ePu">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2zB-Md-mdB" firstAttribute="trailing" secondItem="fag-2P-uiJ" secondAttribute="trailing" type="default" id="Nff-L5-IfZ"/>
+                            <constraint firstItem="2zB-Md-mdB" firstAttribute="bottom" secondItem="fag-2P-uiJ" secondAttribute="bottom" type="default" id="QvZ-b8-pUg"/>
+                            <constraint firstItem="2zB-Md-mdB" firstAttribute="leading" secondItem="fag-2P-uiJ" secondAttribute="leading" type="default" id="jLo-3o-CDb"/>
+                            <constraint firstItem="e2W-HC-BLo" firstAttribute="top" secondItem="fag-2P-uiJ" secondAttribute="top" type="default" id="oju-65-1CS"/>
+                            <constraint firstItem="e2W-HC-BLo" firstAttribute="trailing" secondItem="fag-2P-uiJ" secondAttribute="trailing" type="default" id="rzL-3i-tno"/>
+                            <constraint firstItem="2zB-Md-mdB" firstAttribute="top" secondItem="e2W-HC-BLo" secondAttribute="bottom" type="default" id="s0o-1w-tU5"/>
+                            <constraint firstItem="e2W-HC-BLo" firstAttribute="leading" secondItem="fag-2P-uiJ" secondAttribute="leading" type="default" id="yUl-41-In6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="奖品管理" id="RQe-ag-dmy"/>
+                    <connections>
+                        <outlet property="add" destination="Ddm-fD-3pw" id="WXe-34-skr"/>
+                        <outlet property="editPrize" destination="9QX-pl-VTl" id="0xz-BX-sJC"/>
+                        <outlet property="myTableView" destination="2zB-Md-mdB" id="hyN-ah-oB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpP-6z-2Qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="165"/>
+        </scene>
+        <!--People Manage Controller - 人员管理-->
+        <scene sceneID="gNh-rv-CcB">
+            <objects>
+                <viewController id="H26-PQ-8sa" customClass="PeopleManageController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mEg-bU-Zew">
+                        <rect key="frame" x="0.0" y="20" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8i-19-Mz6">
+                                <items>
+                                    <barButtonItem systemItem="edit" id="xcC-Cq-tHq"/>
+                                    <barButtonItem title="人员管理" width="208" style="plain" id="gAX-pO-eMB"/>
+                                    <barButtonItem systemItem="add" id="rnc-fC-wS2"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TON-f9-HHB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" type="user" id="An3-Ca-Dw3"/>
+                                    <constraint firstAttribute="height" constant="461" id="z6O-ro-bKz"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" horizontalCompressionResistancePriority="770" selectionStyle="blue" indentationWidth="10" reuseIdentifier="peopleTableCell" rowHeight="100" id="Db5-4d-gto">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="H26-PQ-8sa" id="taJ-Dy-jif"/>
+                                    <outlet property="delegate" destination="H26-PQ-8sa" id="G4p-9Q-3mb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TON-f9-HHB" firstAttribute="leading" secondItem="mEg-bU-Zew" secondAttribute="leading" type="default" id="1cK-1M-pEo"/>
+                            <constraint firstItem="h8i-19-Mz6" firstAttribute="top" secondItem="mEg-bU-Zew" secondAttribute="top" type="default" id="7d8-6o-JxY"/>
+                            <constraint firstItem="TON-f9-HHB" firstAttribute="top" secondItem="h8i-19-Mz6" secondAttribute="bottom" type="default" id="ccb-1P-oTf"/>
+                            <constraint firstItem="h8i-19-Mz6" firstAttribute="leading" secondItem="mEg-bU-Zew" secondAttribute="leading" type="default" id="qvg-kg-S9Y"/>
+                            <constraint firstItem="h8i-19-Mz6" firstAttribute="trailing" secondItem="mEg-bU-Zew" secondAttribute="trailing" type="default" id="yC4-KX-sEn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="人员管理" id="Ebp-vj-5nl"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addPeople" destination="rnc-fC-wS2" id="W1u-bx-ioQ"/>
+                        <outlet property="edit" destination="xcC-Cq-tHq" id="fSU-JS-tgd"/>
+                        <outlet property="myTableView" destination="TON-f9-HHB" id="H9m-iJ-dM7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYE-Mz-IYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="698" y="-502"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="t5C-xt-Ybd">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="Y3u-ym-jWH" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="xjQ-Rc-AmC">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H26-PQ-8sa" kind="relationship" relationship="viewControllers" id="zXb-Ku-UDE"/>
+                        <segue destination="nW7-Q2-RNY" kind="relationship" relationship="viewControllers" id="Huq-pF-rmy"/>
+                        <segue destination="Klo-Fv-LAe" kind="relationship" relationship="viewControllers" id="sEx-v2-eBe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7V-1v-ULZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="-175"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1BEFE816D0C32F00139E8A /* PeopleList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFE716D0C32F00139E8A /* PeopleList.m */; };
+		DA1BEFEB16D37B3B00139E8A /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1BEFEA16D37B3B00139E8A /* libsqlite3.0.dylib */; };
+		DA1BEFF816D37EAD00139E8A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFEE16D37EAD00139E8A /* FMDatabase.m */; };
+		DA1BEFF916D37EAD00139E8A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFF016D37EAD00139E8A /* FMDatabaseAdditions.m */; };
+		DA1BEFFA16D37EAD00139E8A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFF216D37EAD00139E8A /* FMDatabasePool.m */; };
+		DA1BEFFB16D37EAD00139E8A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFF416D37EAD00139E8A /* FMDatabaseQueue.m */; };
+		DA1BEFFC16D37EAD00139E8A /* fmdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFF516D37EAD00139E8A /* fmdb.m */; };
+		DA1BEFFD16D37EAD00139E8A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BEFF716D37EAD00139E8A /* FMResultSet.m */; };
+		DA1BF00116D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BF00016D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.m */; };
+		DA1BF00416D4BB6400139E8A /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1BF00316D4BB6400139E8A /* DBManager.m */; };
+		DA2F7BF116D73BD300C2DF89 /* ImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2F7BF016D73BD300C2DF89 /* ImageHandle.m */; };
+		DA2F7BF516D74B5500C2DF89 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2F7BF416D74B5500C2DF89 /* ImageCell.m */; };
+		DA75AB8816DB4960002D6636 /* PrizeManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA75AB8716DB4960002D6636 /* PrizeManageController.m */; };
+		DA75AB8C16DB4CCB002D6636 /* PrizeList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA75AB8B16DB4CCB002D6636 /* PrizeList.m */; };
+		DA75AB8F16DB4FCE002D6636 /* PhotoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA75AB8E16DB4FCE002D6636 /* PhotoList.m */; };
+		DA7DF71C16DCBA5000E2E510 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7DF71B16DCBA5000E2E510 /* PickerView.m */; };
 		DAE0E78016CF26C6003C9D74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E77F16CF26C6003C9D74 /* UIKit.framework */; };
 		DAE0E78216CF26C6003C9D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E78116CF26C6003C9D74 /* Foundation.framework */; };
 		DAE0E78416CF26C6003C9D74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E78316CF26C6003C9D74 /* CoreGraphics.framework */; };
@@ -24,6 +40,11 @@
 		DAE0E7A916CF26C7003C9D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E78116CF26C6003C9D74 /* Foundation.framework */; };
 		DAE0E7B116CF26C7003C9D74 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAE0E7AF16CF26C7003C9D74 /* InfoPlist.strings */; };
 		DAE0E7B416CF26C7003C9D74 /* lotteryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE0E7B316CF26C7003C9D74 /* lotteryTests.m */; };
+		DAE0E7CE16CF5148003C9D74 /* MHImagePickerMutilSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE0E7CC16CF5147003C9D74 /* MHImagePickerMutilSelector.m */; };
+		DAE0E7D016CF69AF003C9D74 /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE0E7CF16CF69AF003C9D74 /* done.png */; };
+		DAE0E7D216CF6B68003C9D74 /* del.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE0E7D116CF6B68003C9D74 /* del.png */; };
+		DAE0E7D416CF6C05003C9D74 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DAE0E7D316CF6C05003C9D74 /* bg.png */; };
+		DAE0E7D716CF75D4003C9D74 /* PeopleManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE0E7D616CF75D4003C9D74 /* PeopleManageController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +58,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1BEFE616D0C32F00139E8A /* PeopleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleList.h; sourceTree = "<group>"; };
+		DA1BEFE716D0C32F00139E8A /* PeopleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleList.m; sourceTree = "<group>"; };
+		DA1BEFEA16D37B3B00139E8A /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		DA1BEFED16D37EAD00139E8A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = ../FMDatabase.h; sourceTree = "<group>"; };
+		DA1BEFEE16D37EAD00139E8A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = ../FMDatabase.m; sourceTree = "<group>"; };
+		DA1BEFEF16D37EAD00139E8A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = ../FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		DA1BEFF016D37EAD00139E8A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = ../FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		DA1BEFF116D37EAD00139E8A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = ../FMDatabasePool.h; sourceTree = "<group>"; };
+		DA1BEFF216D37EAD00139E8A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = ../FMDatabasePool.m; sourceTree = "<group>"; };
+		DA1BEFF316D37EAD00139E8A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = ../FMDatabaseQueue.h; sourceTree = "<group>"; };
+		DA1BEFF416D37EAD00139E8A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = ../FMDatabaseQueue.m; sourceTree = "<group>"; };
+		DA1BEFF516D37EAD00139E8A /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fmdb.m; path = ../fmdb.m; sourceTree = "<group>"; };
+		DA1BEFF616D37EAD00139E8A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = ../FMResultSet.h; sourceTree = "<group>"; };
+		DA1BEFF716D37EAD00139E8A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = ../FMResultSet.m; sourceTree = "<group>"; };
+		DA1BEFFF16D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
+		DA1BF00016D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
+		DA1BF00216D4BB6400139E8A /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		DA1BF00316D4BB6400139E8A /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		DA2F7BEF16D73BD300C2DF89 /* ImageHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageHandle.h; path = service/ImageHandle.h; sourceTree = "<group>"; };
+		DA2F7BF016D73BD300C2DF89 /* ImageHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageHandle.m; path = service/ImageHandle.m; sourceTree = "<group>"; };
+		DA2F7BF316D74B5500C2DF89 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		DA2F7BF416D74B5500C2DF89 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		DA75AB8616DB4960002D6636 /* PrizeManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrizeManageController.h; sourceTree = "<group>"; };
+		DA75AB8716DB4960002D6636 /* PrizeManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrizeManageController.m; sourceTree = "<group>"; };
+		DA75AB8A16DB4CCB002D6636 /* PrizeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrizeList.h; path = model/PrizeList.h; sourceTree = "<group>"; };
+		DA75AB8B16DB4CCB002D6636 /* PrizeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrizeList.m; path = model/PrizeList.m; sourceTree = "<group>"; };
+		DA75AB8D16DB4FCE002D6636 /* PhotoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoList.h; path = model/PhotoList.h; sourceTree = "<group>"; };
+		DA75AB8E16DB4FCE002D6636 /* PhotoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoList.m; path = model/PhotoList.m; sourceTree = "<group>"; };
+		DA7DF71A16DCBA5000E2E510 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
+		DA7DF71B16DCBA5000E2E510 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
+		DABABCB416D4D67C00B6C65D /* lottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lottery.entitlements; sourceTree = "<group>"; };
 		DAE0E77B16CF26C6003C9D74 /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE0E77F16CF26C6003C9D74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAE0E78116CF26C6003C9D74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +112,13 @@
 		DAE0E7B016CF26C7003C9D74 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAE0E7B216CF26C7003C9D74 /* lotteryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lotteryTests.h; sourceTree = "<group>"; };
 		DAE0E7B316CF26C7003C9D74 /* lotteryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lotteryTests.m; sourceTree = "<group>"; };
+		DAE0E7CC16CF5147003C9D74 /* MHImagePickerMutilSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MHImagePickerMutilSelector.m; path = ../../../../../Users/toby/Downloads/MHImagePickerMutilSelector/MHImagePickerMutilSelector.m; sourceTree = "<group>"; };
+		DAE0E7CD16CF5147003C9D74 /* MHImagePickerMutilSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MHImagePickerMutilSelector.h; path = ../../../../../Users/toby/Downloads/MHImagePickerMutilSelector/MHImagePickerMutilSelector.h; sourceTree = "<group>"; };
+		DAE0E7CF16CF69AF003C9D74 /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = done.png; path = ../../../../../Users/toby/Downloads/done.png; sourceTree = "<group>"; };
+		DAE0E7D116CF6B68003C9D74 /* del.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = del.png; path = ../../../../../Users/toby/Downloads/del.png; sourceTree = "<group>"; };
+		DAE0E7D316CF6C05003C9D74 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../../../../../Users/toby/Downloads/bg.png; sourceTree = "<group>"; };
+		DAE0E7D516CF75D4003C9D74 /* PeopleManageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleManageController.h; sourceTree = "<group>"; };
+		DAE0E7D616CF75D4003C9D74 /* PeopleManageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleManageController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1BEFEB16D37B3B00139E8A /* libsqlite3.0.dylib in Frameworks */,
 				DAE0E78016CF26C6003C9D74 /* UIKit.framework in Frameworks */,
 				DAE0E78216CF26C6003C9D74 /* Foundation.framework in Frameworks */,
 				DAE0E78416CF26C6003C9D74 /* CoreGraphics.framework in Frameworks */,
@@ -86,9 +146,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1BEFEC16D37E9400139E8A /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				DA1BEFFE16D37EC200139E8A /* extra */,
+				DA1BEFED16D37EAD00139E8A /* FMDatabase.h */,
+				DA1BEFEE16D37EAD00139E8A /* FMDatabase.m */,
+				DA1BEFEF16D37EAD00139E8A /* FMDatabaseAdditions.h */,
+				DA1BEFF016D37EAD00139E8A /* FMDatabaseAdditions.m */,
+				DA1BEFF116D37EAD00139E8A /* FMDatabasePool.h */,
+				DA1BEFF216D37EAD00139E8A /* FMDatabasePool.m */,
+				DA1BEFF316D37EAD00139E8A /* FMDatabaseQueue.h */,
+				DA1BEFF416D37EAD00139E8A /* FMDatabaseQueue.m */,
+				DA1BEFF516D37EAD00139E8A /* fmdb.m */,
+				DA1BEFF616D37EAD00139E8A /* FMResultSet.h */,
+				DA1BEFF716D37EAD00139E8A /* FMResultSet.m */,
+			);
+			name = fmdb;
+			path = ../../../../../Users/toby/git/fmdb/src/fmdb;
+			sourceTree = "<group>";
+		};
+		DA1BEFFE16D37EC200139E8A /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				DA1BEFFF16D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.h */,
+				DA1BF00016D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.m */,
+			);
+			name = extra;
+			path = ../../extra;
+			sourceTree = "<group>";
+		};
 		DAE0E77016CF26C6003C9D74 = {
 			isa = PBXGroup;
 			children = (
+				DA1BEFEA16D37B3B00139E8A /* libsqlite3.0.dylib */,
 				DAE0E78516CF26C6003C9D74 /* lottery */,
 				DAE0E7AC16CF26C7003C9D74 /* lotteryTests */,
 				DAE0E77E16CF26C6003C9D74 /* Frameworks */,
@@ -119,8 +210,30 @@
 		DAE0E78516CF26C6003C9D74 /* lottery */ = {
 			isa = PBXGroup;
 			children = (
+				DABABCB416D4D67C00B6C65D /* lottery.entitlements */,
+				DA1BEFEC16D37E9400139E8A /* fmdb */,
+				DAE0E7CD16CF5147003C9D74 /* MHImagePickerMutilSelector.h */,
+				DA7DF71A16DCBA5000E2E510 /* PickerView.h */,
+				DA7DF71B16DCBA5000E2E510 /* PickerView.m */,
+				DAE0E7CC16CF5147003C9D74 /* MHImagePickerMutilSelector.m */,
+				DA2F7BF316D74B5500C2DF89 /* ImageCell.h */,
+				DA2F7BF416D74B5500C2DF89 /* ImageCell.m */,
+				DA2F7BEF16D73BD300C2DF89 /* ImageHandle.h */,
+				DA2F7BF016D73BD300C2DF89 /* ImageHandle.m */,
+				DA1BEFE616D0C32F00139E8A /* PeopleList.h */,
+				DA75AB8A16DB4CCB002D6636 /* PrizeList.h */,
+				DA75AB8D16DB4FCE002D6636 /* PhotoList.h */,
+				DA75AB8E16DB4FCE002D6636 /* PhotoList.m */,
+				DA75AB8B16DB4CCB002D6636 /* PrizeList.m */,
+				DA1BEFE716D0C32F00139E8A /* PeopleList.m */,
 				DAE0E78E16CF26C6003C9D74 /* LotteryAppDelegate.h */,
+				DA1BF00216D4BB6400139E8A /* DBManager.h */,
+				DA1BF00316D4BB6400139E8A /* DBManager.m */,
 				DAE0E78F16CF26C6003C9D74 /* LotteryAppDelegate.m */,
+				DAE0E7D516CF75D4003C9D74 /* PeopleManageController.h */,
+				DA75AB8616DB4960002D6636 /* PrizeManageController.h */,
+				DA75AB8716DB4960002D6636 /* PrizeManageController.m */,
+				DAE0E7D616CF75D4003C9D74 /* PeopleManageController.m */,
 				DAE0E79716CF26C6003C9D74 /* MainStoryboard_iPhone.storyboard */,
 				DAE0E79A16CF26C6003C9D74 /* MainStoryboard_iPad.storyboard */,
 				DAE0E79D16CF26C6003C9D74 /* LotteryViewController.h */,
@@ -133,6 +246,9 @@
 		DAE0E78616CF26C6003C9D74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAE0E7D316CF6C05003C9D74 /* bg.png */,
+				DAE0E7D116CF6B68003C9D74 /* del.png */,
+				DAE0E7CF16CF69AF003C9D74 /* done.png */,
 				DAE0E78716CF26C6003C9D74 /* lottery-Info.plist */,
 				DAE0E78816CF26C6003C9D74 /* InfoPlist.strings */,
 				DAE0E78B16CF26C6003C9D74 /* main.m */,
@@ -241,6 +357,9 @@
 				DAE0E79616CF26C6003C9D74 /* Default-568h@2x.png in Resources */,
 				DAE0E79916CF26C6003C9D74 /* MainStoryboard_iPhone.storyboard in Resources */,
 				DAE0E79C16CF26C6003C9D74 /* MainStoryboard_iPad.storyboard in Resources */,
+				DAE0E7D016CF69AF003C9D74 /* done.png in Resources */,
+				DAE0E7D216CF6B68003C9D74 /* del.png in Resources */,
+				DAE0E7D416CF6C05003C9D74 /* bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +397,23 @@
 				DAE0E78C16CF26C6003C9D74 /* main.m in Sources */,
 				DAE0E79016CF26C6003C9D74 /* LotteryAppDelegate.m in Sources */,
 				DAE0E79F16CF26C6003C9D74 /* LotteryViewController.m in Sources */,
+				DAE0E7CE16CF5148003C9D74 /* MHImagePickerMutilSelector.m in Sources */,
+				DAE0E7D716CF75D4003C9D74 /* PeopleManageController.m in Sources */,
+				DA1BEFE816D0C32F00139E8A /* PeopleList.m in Sources */,
+				DA1BEFF816D37EAD00139E8A /* FMDatabase.m in Sources */,
+				DA1BEFF916D37EAD00139E8A /* FMDatabaseAdditions.m in Sources */,
+				DA1BEFFA16D37EAD00139E8A /* FMDatabasePool.m in Sources */,
+				DA1BEFFB16D37EAD00139E8A /* FMDatabaseQueue.m in Sources */,
+				DA1BEFFC16D37EAD00139E8A /* fmdb.m in Sources */,
+				DA1BEFFD16D37EAD00139E8A /* FMResultSet.m in Sources */,
+				DA1BF00116D37EC200139E8A /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				DA1BF00416D4BB6400139E8A /* DBManager.m in Sources */,
+				DA2F7BF116D73BD300C2DF89 /* ImageHandle.m in Sources */,
+				DA2F7BF516D74B5500C2DF89 /* ImageCell.m in Sources */,
+				DA75AB8816DB4960002D6636 /* PrizeManageController.m in Sources */,
+				DA75AB8C16DB4CCB002D6636 /* PrizeList.m in Sources */,
+				DA75AB8F16DB4FCE002D6636 /* PhotoList.m in Sources */,
+				DA7DF71C16DCBA5000E2E510 /* PickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +526,7 @@
 		DAE0E7B816CF26C7003C9D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "lottery/lottery-Prefix.pch";
 				INFOPLIST_FILE = "lottery/lottery-Info.plist";
@@ -401,6 +538,7 @@
 		DAE0E7B916CF26C7003C9D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "lottery/lottery-Prefix.pch";
 				INFOPLIST_FILE = "lottery/lottery-Info.plist";
@@ -462,6 +600,7 @@
 				DAE0E7B916CF26C7003C9D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAE0E7BA16CF26C7003C9D74 /* Build configuration list for PBXNativeTarget "lotteryTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +609,7 @@
 				DAE0E7BC16CF26C7003C9D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
