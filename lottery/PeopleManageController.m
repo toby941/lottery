@@ -8,6 +8,7 @@
 
 #import "PeopleManageController.h"
 #import "MHImagePickerMutilSelector.h"
+#import "MyImagePickerMutilSelector.h"
 #import "PeopleList.h"
 #import "FMDatabase.h"
 #import "DBManager.h"
@@ -23,7 +24,7 @@
 @synthesize items;
 @synthesize addPeople;
 @synthesize edit;
-
+@synthesize selectedList;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -64,11 +65,13 @@
     
     [edit setTarget:self];
     edit.action=@selector(editCell:);
+    [self refreshItem];
     
-    if(!self.items){
-        self.items=[[NSMutableArray alloc] init];
-    }
-    
+}
+
+-(void) refreshItem
+{
+    self.items=[[NSMutableArray alloc] init];
     FMDatabase *db=[DBManager getDb];
     [db open];
     FMResultSet *rs = [db executeQuery:@"SELECT uid,name, count,pics FROM peoples"];
@@ -85,6 +88,7 @@
     [rs close];
     [db close];
 }
+
 
 -(void)selectLeftAction:(id)sender
 {
@@ -108,7 +112,8 @@
 -(IBAction) pickMutilImage:(id)sender
 {
     
-    MHImagePickerMutilSelector* imagePickerMutilSelector= [[MHImagePickerMutilSelector alloc] init];;//自动释放
+    // MHImagePickerMutilSelector* imagePickerMutilSelector= [[MHImagePickerMutilSelector alloc] init];;//自动释放
+    MyImagePickerMutilSelector* imagePickerMutilSelector= [[MyImagePickerMutilSelector alloc] initWithPhotoList:selectedList];//自动释放
     imagePickerMutilSelector.delegate=self;//设置代理
     
     UIImagePickerController* picker=[[UIImagePickerController alloc] init];
@@ -127,12 +132,17 @@
 -(void)imagePickerMutilSelectorDidGetImages:(PeopleList*)peopleList;
 {
     PeopleList* importList=peopleList;
-    NSLog(@" count photo :%u",importList.pics.count);
+   // NSLog(@" count photo :%u",importList.pics.count);
     if(items==nil){
         self.items=[[NSMutableArray alloc] init];
     }
-    [items addObject:importList];
-    [self addRecord:importList];
+    if(selectedList==nil){
+        [self addRecord:importList];
+    }else{
+        [self updateRecord:importList];
+    }
+    selectedList=nil;
+    [self refreshItem];
     [myTableView reloadData];
 }
 
@@ -157,6 +167,36 @@
     
     return items.count;
     
+}
+
+-(BOOL) updateRecord:(PeopleList*) people
+{
+    NSInteger uid=selectedList.uid;
+    FMDatabase *db=[DBManager getDb];
+    if(db==nil){
+        NSLog(@"db is null.");
+    }
+    if (![db open]) {
+        NSLog(@"Could not open db.");
+        return false;
+    }
+    
+    NSData *data=[NSKeyedArchiver archivedDataWithRootObject:people.pics];
+    /*
+     NSString *query = @"";
+     query = [NSString stringWithFormat:@"UPDATE peoples SET name='%@' where uid=%d",people.name,uid];
+     
+     if( ![db executeUpdate:@"UPDATE peoples set name=?,count=? where uid=?", people.name,[NSNumber numberWithInt:people.pics.count],uid])
+     {
+     */
+    
+    if( ![db executeUpdate:@"UPDATE peoples set name=?,count=?,pics=? where uid=?", people.name,[NSNumber numberWithInt:people.pics.count],data,[NSNumber numberWithInt:uid]])
+    {
+        NSLog(@"Could not update data: %@", [db lastErrorMessage]);
+    }
+    [db commit];
+    [db close];
+    return true;
 }
 
 -(BOOL) addRecord:(PeopleList *)people
@@ -205,7 +245,7 @@
         //        cell=[[UITableViewCell alloc] initWithFrame:CGRectZero];
         cell.selectionStyle=UITableViewCellSelectionStyleNone;
     }
-
+    
     PeopleList *p=[items objectAtIndex:row];
     //  UIImage *img=[p.pics objectAtIndex:0];
     if(p.pics&&p.pics.count>0){
@@ -218,7 +258,7 @@
     cell.textLabel.text = str;
     cell.imageView.contentMode=UIViewContentModeScaleAspectFit;
     
-    cell.accessoryType= UITableViewCellAccessoryDetailDisclosureButton; 
+    cell.accessoryType= UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
 }
 
@@ -232,32 +272,26 @@
  */
 
 
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
-      NSInteger row=indexPath.row;
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
-      PeopleList *delList=[items objectAtIndex:row];
-      [items removeObjectAtIndex:row];
-     
-     FMDatabase *db=[DBManager getDb];
-     [db open];
-   
-     [db executeUpdate:@"delete FROM peoples where uid=?",[NSNumber numberWithInt:delList.uid]];
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger row=indexPath.row;
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        PeopleList *delList=[items objectAtIndex:row];
+        [items removeObjectAtIndex:row];
+        FMDatabase *db=[DBManager getDb];
+        [db open];
+        [db executeUpdate:@"delete FROM peoples where uid=?",[NSNumber numberWithInt:delList.uid]];
+        [db close];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
     
-     [db close];
-     
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- 
-    
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
-    
- }
- 
+}
+
 
 /*
  // Override to support rearranging the table view.
@@ -280,12 +314,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cellView = [tableView cellForRowAtIndexPath:indexPath];
-    if (cellView.accessoryType == UITableViewCellAccessoryNone) {
-        cellView.accessoryType=UITableViewCellAccessoryCheckmark;
-    }
-    else {
-        cellView.accessoryType = UITableViewCellAccessoryNone;
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }  }
+    
+    
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+    self.selectedList=[items objectAtIndex:indexPath.row];
+    [self pickMutilImage:self];
+}
+
 
 @end

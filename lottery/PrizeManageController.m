@@ -65,10 +65,18 @@
     [editPrize setTarget:self];
     editPrize.action=@selector(editCell:);
     
+    [self refreshItems];
+    
+  }
+
+/*
+ 重置列表cell
+ */
+-(void) refreshItems
+{
     if(!self.items){
         self.items=[[NSMutableArray alloc] init];
     }
-    
     FMDatabase *db=[DBManager getDb];
     [db open];
     FMResultSet *rs = [db executeQuery:@"SELECT uid,name, count,pics FROM prize"];
@@ -86,8 +94,6 @@
     [db close];
 }
 
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -104,7 +110,7 @@
 -(IBAction) pickMutilImage:(id)sender
 {
     
-    MHImagePickerMutilSelector* imagePickerMutilSelector= [[MHImagePickerMutilSelector alloc] init];;//自动释放
+    MHImagePickerMutilSelector* imagePickerMutilSelector= [[MHImagePickerMutilSelector alloc] init];//自动释放
     imagePickerMutilSelector.delegate=self;//设置代理
     
     UIImagePickerController* picker=[[UIImagePickerController alloc] init];

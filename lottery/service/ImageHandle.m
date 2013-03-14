@@ -69,7 +69,7 @@
     
     
     UIImage *image=[pics objectAtIndex:0];
-    NSLog(@"pic count :%d",pics.count);
+   // NSLog(@"pic count :%d",pics.count);
     CGSize imageSize = image.size;
     CGFloat width = imageSize.width;
     CGFloat height = imageSize.height;

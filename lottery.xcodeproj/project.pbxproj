@@ -23,6 +23,7 @@
 		DA75AB8C16DB4CCB002D6636 /* PrizeList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA75AB8B16DB4CCB002D6636 /* PrizeList.m */; };
 		DA75AB8F16DB4FCE002D6636 /* PhotoList.m in Sources */ = {isa = PBXBuildFile; fileRef = DA75AB8E16DB4FCE002D6636 /* PhotoList.m */; };
 		DA7DF71C16DCBA5000E2E510 /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7DF71B16DCBA5000E2E510 /* PickerView.m */; };
+		DAD4875E16E49CA1003C56A1 /* MyImagePickerMutilSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD4875D16E49CA1003C56A1 /* MyImagePickerMutilSelector.m */; };
 		DAE0E78016CF26C6003C9D74 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E77F16CF26C6003C9D74 /* UIKit.framework */; };
 		DAE0E78216CF26C6003C9D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E78116CF26C6003C9D74 /* Foundation.framework */; };
 		DAE0E78416CF26C6003C9D74 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0E78316CF26C6003C9D74 /* CoreGraphics.framework */; };
@@ -89,6 +90,8 @@
 		DA7DF71A16DCBA5000E2E510 /* PickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
 		DA7DF71B16DCBA5000E2E510 /* PickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
 		DABABCB416D4D67C00B6C65D /* lottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = lottery.entitlements; sourceTree = "<group>"; };
+		DAD4875C16E49CA0003C56A1 /* MyImagePickerMutilSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImagePickerMutilSelector.h; sourceTree = "<group>"; };
+		DAD4875D16E49CA1003C56A1 /* MyImagePickerMutilSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImagePickerMutilSelector.m; sourceTree = "<group>"; };
 		DAE0E77B16CF26C6003C9D74 /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE0E77F16CF26C6003C9D74 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAE0E78116CF26C6003C9D74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -213,6 +216,8 @@
 				DABABCB416D4D67C00B6C65D /* lottery.entitlements */,
 				DA1BEFEC16D37E9400139E8A /* fmdb */,
 				DAE0E7CD16CF5147003C9D74 /* MHImagePickerMutilSelector.h */,
+				DAD4875C16E49CA0003C56A1 /* MyImagePickerMutilSelector.h */,
+				DAD4875D16E49CA1003C56A1 /* MyImagePickerMutilSelector.m */,
 				DA7DF71A16DCBA5000E2E510 /* PickerView.h */,
 				DA7DF71B16DCBA5000E2E510 /* PickerView.m */,
 				DAE0E7CC16CF5147003C9D74 /* MHImagePickerMutilSelector.m */,
@@ -414,6 +419,7 @@
 				DA75AB8C16DB4CCB002D6636 /* PrizeList.m in Sources */,
 				DA75AB8F16DB4FCE002D6636 /* PhotoList.m in Sources */,
 				DA7DF71C16DCBA5000E2E510 /* PickerView.m in Sources */,
+				DAD4875E16E49CA1003C56A1 /* MyImagePickerMutilSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
